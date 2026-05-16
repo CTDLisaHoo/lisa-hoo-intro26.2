@@ -1,0 +1,153 @@
+/*Google font*/
+/* @import url('https://googleapis.com'); */
+
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* Smooth Scrolling */
+html{
+  scroll-behavior:smooth;
+}
+
+/* Body */
+body{
+  background-color:#fff7f8;
+  color:#4b4453;
+  font-family:'Poppins', sans-serif;
+  line-height:1.6;
+}
+
+/* Navigation */
+nav{
+  background-color:#ffffff;
+  padding:20px 50px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Name */
+.logo{
+  color:#ff4f87;
+  font-size:2rem;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* Nav Links */
+.nav-links{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+.nav-links a{
+  color:#5b5563;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+.nav-links a:hover{
+  color:#ff4f87;
+}
+
+/* Sections */
+section{
+  padding:70px 50px;
+}
+
+/* Headings */
+h2{
+  font-size:2rem;
+  color:#7c5cff;
+  margin-bottom:25px;
+  font-weight:700;
+}
+
+/* About */
+
+#about{
+  text-align:center;
+}
+#about p{
+  text-align:left;
+}
+
+/* Experience */
+.experience-item{
+  background-color:#ffffff;
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:15px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.experience-item:hover{
+  transform:translateY(-5px);
+}
+
+/* Flexbox */
+.experience-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.experience-header h3{
+  color:#ff4f87;
+}
+
+.experience-header span{
+  color:#888888;
+}
+
+/* Skills & Projects Sections */
+#about,
+#experience,
+#skills,
+#projects,
+#connect{
+  background-color:#fdf1f6;
+  border-radius:20px;
+  margin:20px 50px;
+}
+
+/* Connect Section */
+.connect-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* Connect Buttons */
+.connect-links a{
+  background-color:#ff4f87;
+  color:white;
+  text-decoration:none;
+  padding:12px 20px;
+  border-radius:30px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.connect-links a:hover{
+  background-color:#7c5cff;
+  transform:translateY(-3px);
+}
+
+
+
+
+
