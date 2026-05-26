@@ -91,6 +91,9 @@ messageForm.addEventListener("submit", async function (event) {
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
 
+    // Log values to console
+    console.log(usersName, usersEmail, usersMessage);
+
     // Create message object
     const messageData = {
         usersName,
