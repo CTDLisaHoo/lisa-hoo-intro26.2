@@ -1,5 +1,5 @@
-/*Google font*/
-/* @import url('https://googleapis.com'); */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Reset */
 *{
@@ -33,10 +33,11 @@ nav{
   position:sticky;
   top:0;
   z-index:1000;
+
   box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Name */
+/* Logo */
 .logo{
   color:#ff4f87;
   font-size:2rem;
@@ -50,12 +51,14 @@ nav{
   gap:25px;
   list-style:none;
 }
+
 .nav-links a{
   color:#5b5563;
   text-decoration:none;
   font-weight:500;
   transition:0.3s;
 }
+
 .nav-links a:hover{
   color:#ff4f87;
 }
@@ -73,16 +76,32 @@ h2{
   font-weight:700;
 }
 
-/* About */
+/* Shared Section Styling */
+#about,
+#experience,
+#skills,
+#projects,
+#connect,
+#leave-message,
+#messages{
+  background-color:#fdf1f6;
+  border-radius:20px;
+  margin:20px 50px;
+  padding:40px;
 
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* About */
 #about{
   text-align:center;
 }
+
 #about p{
   text-align:left;
 }
 
-/* Experience */
+/* Experience Cards */
 .experience-item{
   background-color:#ffffff;
   padding:25px;
@@ -97,7 +116,7 @@ h2{
   transform:translateY(-5px);
 }
 
-/* Flexbox */
+/* Experience Header */
 .experience-header{
   display:flex;
   justify-content:space-between;
@@ -113,33 +132,24 @@ h2{
   color:#888888;
 }
 
-/* Skills & Projects Sections */
-#about,
-#experience,
-#skills,
-#projects,
-#connect{
-  background-color:#fdf1f6;
-  border-radius:20px;
-  margin:20px 50px;
-}
-
 /* Skills List */
 #skills ul{
   display:flex;
   flex-wrap:wrap;
   gap:15px;
   list-style:none;
-  padding:0;
 }
 
 /* Skill Items */
 #skills li{
   background-color:#ffffff;
   color:#ff4f87;
+
   padding:10px 18px;
   border-radius:25px;
+
   font-weight:600;
+
   box-shadow:0 4px 10px rgba(0,0,0,0.05);
   transition:0.3s;
 }
@@ -150,7 +160,7 @@ h2{
   color:white;
 }
 
-/* Connect Section */
+/* Connect Links */
 .connect-links{
   display:flex;
   gap:20px;
@@ -161,9 +171,12 @@ h2{
 .connect-links a{
   background-color:#ff4f87;
   color:white;
+
   text-decoration:none;
+
   padding:12px 20px;
   border-radius:30px;
+
   font-weight:600;
   transition:0.3s;
 }
@@ -173,16 +186,139 @@ h2{
   transform:translateY(-3px);
 }
 
+/* Form Layout */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+/* Labels */
+form label{
+  font-weight:600;
+  color:#5b5563;
+}
+
+/* Inputs & Textarea */
+form input,
+form textarea{
+  width:100%;
+  padding:12px;
+
+  border:1px solid #ddd;
+  border-radius:10px;
+
+  font-size:1rem;
+  font-family:'Poppins', sans-serif;
+
+  outline:none;
+  transition:0.3s;
+}
+
+/* Focus Effect */
+form input:focus,
+form textarea:focus{
+  border-color:#ff4f87;
+  box-shadow:0 0 5px rgba(255,79,135,0.3);
+}
+
+/* Textarea */
+form textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+/* Submit Button */
+form button{
+  width:180px;
+
+  padding:12px;
+  border:none;
+  border-radius:30px;
+
+  background-color:#ff4f87;
+  color:white;
+
+  font-weight:600;
+  font-size:1rem;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* Button Hover */
+form button:hover{
+  background-color:#7c5cff;
+  transform:translateY(-3px);
+}
+
+/* Messages List */
+#messages ul{
+  list-style:none;
+  padding:0;
+}
+
+/* Message Item */
+#messages li{
+  background-color:white;
+  margin-bottom:15px;
+  padding:15px;
+
+  border-radius:12px;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Message Links */
+#messages a{
+  color:#ff4f87;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Message Buttons */
+#messages button{
+  background-color:#7c5cff;
+  color:white;
+
+  border:none;
+  padding:8px 14px;
+
+  border-radius:20px;
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+/* Button Hover */
+#messages button:hover{
+  background-color:#ff4f87;
+}
+
 /* Footer */
 footer{
   background-color:#fdf1f6;
-  color:#5b5563;
+  color:#7c5cff;
+
   text-align:center;
+
+  font-size:1.2rem;
+  font-weight:700;
+  font-family:'Poppins', sans-serif;
+
   padding:20px;
   margin:20px 50px;
+
   border-radius:20px;
+
   box-shadow:0 4px 10px rgba(0,0,0,0.05);
-  font-weight:500;
+
+  transition:0.3s;
 }
 
 /* Responsive Design */
@@ -191,6 +327,7 @@ footer{
   nav{
     flex-direction:column;
     gap:15px;
+    padding:20px;
   }
 
   section{
@@ -202,13 +339,23 @@ footer{
   #skills,
   #projects,
   #connect,
+  #leave-message,
+  #messages,
   footer{
     margin:20px;
+    padding:20px;
   }
 
   #skills ul{
     justify-content:center;
   }
+
+  form button{
+    width:100%;
+  }
+
+  #messages li{
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }
-
-
