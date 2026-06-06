@@ -160,6 +160,37 @@ h2{
   color:white;
 }
 
+/* Projects List */
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual Project Items */
+#projects li {
+  background-color: #ffffff;
+  color: #7c5cff;
+
+  padding: 12px 18px;
+  border-radius: 15px;
+
+  font-weight: 600;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#projects li:hover {
+  background-color: #ff4f87;
+  color: white;
+  transform: translateY(-3px);
+}
+
 /* Connect Links */
 .connect-links{
   display:flex;
@@ -347,6 +378,10 @@ footer{
   }
 
   #skills ul{
+    justify-content:center;
+  }
+
+  #projects ul{
     justify-content:center;
   }
 

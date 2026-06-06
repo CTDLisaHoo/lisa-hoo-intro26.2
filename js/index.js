@@ -218,3 +218,44 @@ messageForm.addEventListener("submit", async function (event) {
 
     }
 });
+
+// ================= PROJECTS SECTION =================
+
+async function getRepositories() {
+  try {
+    const projectSection = document.querySelector("#projects");
+    const projectList = projectSection.querySelector("ul");
+
+    const response = await fetch(
+      "https://api.github.com/users/CTDLisaHoo/repos"
+    );
+
+    const repositories = await response.json();
+
+    console.log(repositories);
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+
+      project.innerHTML = `
+        <a href="${repositories[i].html_url}" target="_blank">
+          ${repositories[i].name}
+        </a>
+        <p>${repositories[i].description || "No description"}</p>
+      `;
+
+      projectList.appendChild(project);
+    }
+
+  } catch (error) {
+    console.error("Error fetching repos:", error);
+
+    const projectSection = document.getElementById("projects");
+
+    const errorMessage = document.createElement("p");
+    errorMessage.innerText = "Failed to load projects.";
+    projectSection.appendChild(errorMessage);
+  }
+}
+
+getRepositories();
