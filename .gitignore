@@ -1,0 +1,3 @@
+# Ignore API key file so it is not uploaded to GitHub
+js/config.js
+
