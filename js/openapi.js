@@ -1,5 +1,3 @@
-//const API_KEY = "YOUR_API_KEY_HERE";
-
 const resultsEl = document.getElementById("results");
 const searchInput = document.getElementById("searchInput");
 
@@ -140,6 +138,7 @@ async function searchDogs() {
 // RESET VIEW
 // ======================================================
 function resetApp() {
-  searchInput.value = "";
-  resultsEl.innerHTML = "";
+  searchInput.value = "";   // clears search box
+  searchInput.focus();      // puts cursor back
+  resultsEl.innerHTML = ""; // clears displayed content
 }
