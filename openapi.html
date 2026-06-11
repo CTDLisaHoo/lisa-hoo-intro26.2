@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Lisa Hoo">
+    <meta name="description"
+        content="Dog Explorer is a web application that uses The Dog API to help users explore dog breeds and view random dog images.">
+
+    <title>Dog Explorer</title>
+
+    <link rel="stylesheet" href="css/openapi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">← Back to Portfolio</a>
+</nav>
+
+<h1>Dog Explorer 🐶</h1>
+
+<img src="img/corgi.jpg" alt="Dog Explorer Banner" class="hero-img">
+
+<!-- NAV BUTTONS -->
+<div class="buttons">
+    <button onclick="getBreeds()">Breeds</button>
+    <button onclick="showRandomDogs()">Random Dogs</button>
+    <button onclick="resetApp()">Reset</button>
+</div>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search dog breeds…">
+    <button onclick="searchDogs()">Search Dogs</button>
+</div>
+
+<!-- RESULTS -->
+<div id="results"></div>
+
+<script src="js/config.js"></script>
+<script src="js/openapi.js"></script>
+
+</body>
+</html>
