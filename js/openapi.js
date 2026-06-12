@@ -1,6 +1,9 @@
 const resultsEl = document.getElementById("results");
 const searchInput = document.getElementById("searchInput");
 
+// Use API key if config.js exists, otherwise use empty string
+const apiKey = typeof API_KEY !== "undefined" ? API_KEY : "";
+
 // ======================================================
 // VIEW 1: BREEDS (TEXT DATA ENDPOINT)
 // GET /v1/breeds
@@ -10,7 +13,7 @@ async function getBreeds() {
 
   try {
     const response = await fetch("https://api.thedogapi.com/v1/breeds", {
-      headers: { "x-api-key": API_KEY }
+      headers: { "x-api-key": apiKey }
     });
 
     const data = await response.json();
@@ -50,9 +53,9 @@ async function showRandomDogs() {
 
   try {
     const response = await fetch(
-      "https://api.thedogapi.com/v1/images/search?limit=9",
-      { headers: { "x-api-key": API_KEY } }
-    );
+      "https://api.thedogapi.com/v1/images/search?limit=9",{ 
+       headers: { "x-api-key": apiKey }
+   });
 
     const data = await response.json();
 
@@ -83,11 +86,9 @@ async function searchDogs() {
 
   try {
     const response = await fetch(
-      "https://api.thedogapi.com/v1/breeds",
-      {
-        headers: { "x-api-key": API_KEY }
-      }
-    );
+      "https://api.thedogapi.com/v1/breeds",{
+        headers: { "x-api-key": apiKey }
+  });
 
     const breeds = await response.json();
 
@@ -104,11 +105,9 @@ async function searchDogs() {
 
     for (const breed of matches) {
       const imgResponse = await fetch(
-        `https://api.thedogapi.com/v1/images/search?limit=1&breed_id=${breed.id}`,
-        {
-          headers: { "x-api-key": API_KEY }
-        }
-      );
+        `https://api.thedogapi.com/v1/images/search?limit=1&breed_id=${breed.id}`,{
+         headers: { "x-api-key": apiKey } 
+    });
 
       const imgData = await imgResponse.json();
       const dog = imgData[0];
