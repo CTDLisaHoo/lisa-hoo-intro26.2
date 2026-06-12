@@ -101,6 +101,12 @@ h2{
   text-align:left;
 }
 
+#experience{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* Experience Cards */
 .experience-item{
   background-color:#ffffff;

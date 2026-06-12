@@ -40,5 +40,5 @@ The Dog API
 
 ## Author
 
-Lisa Hoo
+**Lisa Hoo**
 
